@@ -97,6 +97,7 @@
   align-items: center;
 }
 
+/* Images adjust to carousel size */
 .carousel-images img {
   max-width: 100%;
   height: auto;
@@ -105,6 +106,7 @@
   display: block;
 }
 
+/* Navigation buttons */
 .carousel-button {
   position: absolute;
   top: 50%;
@@ -122,6 +124,19 @@
 
 .carousel-button.next {
   right: 5px;
+}
+
+/* Desktop settings */
+@media (min-width: 768px) {
+  .carousel {
+    width: 600px;
+    height: 350px;
+  }
+
+  .carousel-images img {
+    width: 600px;
+    height: 350px;
+  }
 }
 
 
