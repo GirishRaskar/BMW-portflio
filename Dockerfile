@@ -1,19 +1,24 @@
-# Use official PHP with Apache
+# Base image with PHP and Apache
 FROM php:8.1-apache
 
-# Enable Apache mod_rewrite (important for CodeIgniter clean URLs)
+# Install dependencies and enable PHP intl extension
+RUN apt-get update && \
+    apt-get install -y libicu-dev && \
+    docker-php-ext-install intl
+
+# Enable Apache rewrite module
 RUN a2enmod rewrite
 
 # Set working directory
 WORKDIR /var/www/html/
 
-# Copy everything from your project into the container
+# Copy app source
 COPY . /var/www/html/
 
-# Set proper permissions
+# Set permissions
 RUN chown -R www-data:www-data /var/www/html
 
-# Allow .htaccess overrides for Apache
+# Update Apache config to allow .htaccess overrides
 RUN sed -i 's|DocumentRoot /var/www/html|DocumentRoot /var/www/html|' /etc/apache2/sites-available/000-default.conf && \
     echo '<Directory /var/www/html/>\n\
     AllowOverride All\n\
