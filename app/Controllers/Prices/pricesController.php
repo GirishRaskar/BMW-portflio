@@ -9,4 +9,9 @@ class pricesController extends BaseController
     {
         return view('Prices/index');
     }
+
+    public function viewCar(): string
+    {
+        return view('Prices/carInfo');
+    }
 }

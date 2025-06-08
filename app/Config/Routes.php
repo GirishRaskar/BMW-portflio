@@ -13,3 +13,5 @@ $routes->get('features', 'Features\featuresController::index');
 
 $routes->get('about', 'About\aboutController::index');
 
+$routes->get('viewCar', 'Prices\pricesController::viewCar');
+
