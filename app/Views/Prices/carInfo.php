@@ -84,21 +84,22 @@
     font-size: 1rem;
   }
 
-  .carousel {
-  width: 100%;
-  max-width: 600px;   /* keeps it smaller on larger screens */
+ .carousel {
+  width: auto;
+  max-width: 100%;
   height: auto;
-  aspect-ratio: 16 / 9;  /* maintains consistent aspect ratio */
   margin: 0 auto;
   background: #000;
   position: relative;
   overflow: hidden;
-  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .carousel-images img {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  height: auto;
   object-fit: contain;
   background: #000;
   display: block;
@@ -108,7 +109,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.6);
   border: none;
   padding: 8px;
   cursor: pointer;
@@ -121,17 +122,6 @@
 
 .carousel-button.next {
   right: 5px;
-}
-
-@media (max-width: 600px) {
-  .carousel {
-    max-width: 100%;
-    aspect-ratio: 16 / 9;
-  }
-
-  .carousel-button {
-    padding: 6px;
-  }
 }
 
 
