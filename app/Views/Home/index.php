@@ -15,21 +15,19 @@
     object-fit: cover;
     width: 100%;
   }
-.carousel-item img {
-  display: block;
-  max-width: 100%;  /* So image won't overflow container width */
-  height: auto;     /* Keep aspect ratio */
-}
+  .carousel-item img {
+    display: block;
+    max-width: 100%;  /* So image won't overflow container width */
+    height: auto;     /* Keep aspect ratio */
+  }
 
-.carousel-item img {
-  max-height: 500px;  /* Set desired max height */
-  width: auto;        /* Keep aspect ratio */
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-
+  .carousel-item img {
+    max-height: 500px;  /* Set desired max height */
+    width: auto;        /* Keep aspect ratio */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
 	</style>
 
@@ -79,30 +77,7 @@
 
   </style>
 
-  <style>
-  .footer-link {
-    color: #ccc;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-
-  .footer-link:hover {
-    color: #ffffff;
-    text-decoration: underline;
-  }
-
-  .footer-icon {
-    color: #ccc;
-    font-size: 1.25rem;
-    margin-right: 0.75rem;
-    transition: color 0.3s ease, transform 0.3s ease;
-  }
-
-  .footer-icon:hover {
-    color: #0d6efd; /* Bootstrap primary blue */
-    transform: scale(1.2);
-  }
-</style>
+  
 
 </head>
 <body class="bg-light">

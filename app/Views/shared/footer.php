@@ -4,7 +4,35 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
+
+<style>
+  .footer-link {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .footer-link:hover {
+    color: #ffffff;
+    text-decoration: underline;
+  }
+
+  .footer-icon {
+    color: #ccc;
+    font-size: 1.25rem;
+    margin-right: 0.75rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+
+  .footer-icon:hover {
+    color: #0d6efd; /* Bootstrap primary blue */
+    transform: scale(1.2);
+  }
+</style>
+	
+
 </head>
+
 <body>
 	<footer class="bg-dark text-light pt-5 pb-4">
   <div class="container text-md-left">
