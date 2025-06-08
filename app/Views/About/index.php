@@ -94,5 +94,7 @@
   </section>
 
 
+  <?php include(APPPATH . 'Views/shared/footer.php'); ?>
+
 </body>
 </html>
