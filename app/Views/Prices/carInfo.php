@@ -85,25 +85,55 @@
   }
 
   .carousel {
-  width: 600px;       /* reduce carousel width */
-  max-height: 350px;
-  margin: 0 auto;     /* center carousel inside card */
+  width: 100%;
+  max-width: 600px;   /* keeps it smaller on larger screens */
+  height: auto;
+  aspect-ratio: 16 / 9;  /* maintains consistent aspect ratio */
+  margin: 0 auto;
   background: #000;
   position: relative;
   overflow: hidden;
+  border-radius: 8px;
 }
+
 .carousel-images img {
-  width: 600px;       /* match carousel width */
-  height: 350px;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
   background: #000;
+  display: block;
 }
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  z-index: 10;
+}
+
 .carousel-button.prev {
-  left: 2px;          /* adjust button position accordingly */
+  left: 5px;
 }
+
 .carousel-button.next {
-  right: 2px;
+  right: 5px;
 }
+
+@media (max-width: 600px) {
+  .carousel {
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+
+  .carousel-button {
+    padding: 6px;
+  }
+}
+
 
 </style>
 </head>
@@ -132,7 +162,7 @@
       <button class="carousel-button next">&#10095;</button>
     </div>
     <div style="max-width: 720px; margin: 20px auto; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #222; line-height: 1.5; border: 1px solid #ddd; border-radius: 8px; padding: 20px; background: #fff; box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);">
-  <!-- Basic Info -->
+  
   <section style="margin-bottom: 25px;">
     <h2 style="border-bottom: 2px solid #007BFF; padding-bottom: 6px; margin-bottom: 15px; color: #007BFF;">Basic Info</h2>
     <div style="display: grid; grid-template-columns: 140px 1fr; row-gap: 10px; column-gap: 20px;">
@@ -150,13 +180,12 @@
     </div>
   </section>
 
-  <!-- Overview -->
   <section style="margin-bottom: 25px;">
     <h2 style="border-bottom: 2px solid #007BFF; padding-bottom: 6px; margin-bottom: 15px; color: #007BFF;">Overview</h2>
     <p>The 2023 BMW 2 Series Gran Coupe is a sporty and luxurious sedan with a coupe-style design, offering dynamic performance and advanced technology.</p>
   </section>
 
-  <!-- Performance & Engine -->
+  
   <section style="margin-bottom: 25px;">
     <h2 style="border-bottom: 2px solid #007BFF; padding-bottom: 6px; margin-bottom: 15px; color: #007BFF;">Performance & Engine</h2>
     <ul style="padding-left: 20px; margin: 0; list-style-type: disc;">
@@ -168,7 +197,7 @@
     </ul>
   </section>
 
-  <!-- Dimensions & Design -->
+
   <section style="margin-bottom: 25px;">
     <h2 style="border-bottom: 2px solid #007BFF; padding-bottom: 6px; margin-bottom: 15px; color: #007BFF;">Dimensions & Design</h2>
     <ul style="padding-left: 20px; margin: 0; list-style-type: disc;">
@@ -180,7 +209,6 @@
     </ul>
   </section>
 
-  <!-- Features -->
   <section style="margin-bottom: 25px;">
     <h2 style="border-bottom: 2px solid #007BFF; padding-bottom: 6px; margin-bottom: 15px; color: #007BFF;">Features</h2>
     <ul style="padding-left: 20px; margin: 0; list-style-type: disc;">
@@ -192,7 +220,6 @@
     </ul>
   </section>
 
-  <!-- Price Range -->
   <section>
     <h2 style="border-bottom: 2px solid #007BFF; padding-bottom: 6px; margin-bottom: 15px; color: #007BFF;">Price Range</h2>
     <p>₹43 lakh to ₹47 lakh (ex-showroom price, varies by variant and location)</p>
