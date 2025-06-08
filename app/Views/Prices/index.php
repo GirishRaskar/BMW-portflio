@@ -111,7 +111,11 @@
         <div class="cards-container d-flex flex-wrap justify-content-center gap-3">
 
           <div class="card car-card">
-            <img src="https://www.bmw.in/content/dam/bmw/marketIN/bmw_in/Images/all-models/BMW%20Series/bmw-2-series/Main%20Banner%20Desktop.jpg" class="card-img-top car-img" alt="BMW 2 Series Gran Coupe" />
+              <a href="<?=base_url('viewCar')?>" target="_blank" rel="noopener noreferrer">
+                <img src="https://www.bmw.in/content/dam/bmw/marketIN/bmw_in/Images/all-models/BMW%20Series/bmw-2-series/Main%20Banner%20Desktop.jpg" 
+                    class="card-img-top car-img" 
+                    alt="BMW 2 Series Gran Coupe" />
+              </a>
             <div class="card-body">
               <h5 class="card-title">BMW 2 Series Gran Coupe</h5>
               <p class="card-text">₹43.90 – 46.90 Lakh</p>
